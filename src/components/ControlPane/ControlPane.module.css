@@ -12,10 +12,28 @@
   margin-bottom: 32px;
 }
 
+@media (max-width: 450px) {
+  .controlPane {
+    margin-right: 16px;
+    width: 100%;
+  }
+  .title {
+    margin-bottom: 16px !important;
+    white-space: nowrap;
+  }
+}
+
 .title {
   margin: 0;
   /* Optical centering */
   margin-bottom: -4px;
+}
+
+@media (max-width: 450px) {
+  .title {
+    margin-bottom: 16px !important;
+    white-space: nowrap;
+  }
 }
 
 .metadata {

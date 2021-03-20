@@ -3,12 +3,25 @@
   padding-bottom: 64px;
 }
 
+@media (max-width: 450px) {
+  .characterEditor {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
 .maxWidthWrapper {
 }
+
 
 .header {
   width: 65%;
   padding-bottom: 64px;
+}
+@media (max-width: 450px) {
+  .header {
+    display: none;
+  }
 }
 
 .title {
@@ -31,10 +44,31 @@
   min-height: 500px;
   height: 80%;
 }
+@media (max-width: 450px) {
+  .characterWrapper {
+    top: 32px;
+    left: 32px;
+    bottom: 32px;
+    height: auto;
+  }
+}
 
 .controlColumn {
   width: 50%;
   isolation: isolate; /* Create a stacking context to allow this to be laid out in DOM source order with siblings. */
+}
+@media (max-width: 450px) {
+  .controlColumn {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+    overflow: auto;
+    margin: 16px;
+    width: auto;
+  }
 }
 
 .background {
@@ -44,4 +78,9 @@
   bottom: 0;
   right: 0;
   background-color: hsl(195deg, 20%, 86%);
+}
+@media (max-width: 450px) {
+  .background {
+    display: none;
+  }
 }
